@@ -14,8 +14,14 @@ class Mvnd < Formula
     end
   end
   on_linux do
-    url "https://downloads.apache.org/maven/mvnd/2.0.0-rc-1/maven-mvnd-2.0.0-rc-1-linux-amd64.zip"
-    sha256 "58747368c166d13d9dda732614253944895b40e46a9c90c6193068f36015c110"
+    on_intel do
+	    url "https://downloads.apache.org/maven/mvnd/2.0.0-rc-1/maven-mvnd-2.0.0-rc-1-linux-amd64.zip"
+    	sha256 "58747368c166d13d9dda732614253944895b40e46a9c90c6193068f36015c110"
+    end
+    on_arm do
+      url "https://downloads.apache.org/maven/mvnd/2.0.0-rc-1/maven-mvnd-2.0.0-rc-1-linux-aarch64.zip"
+    	sha256 "a5f3474704fbcfa9038fd7efc6238551559e508df3cd143cfdb7278aecb1da6b"
+    end
   end
 
   livecheck do
